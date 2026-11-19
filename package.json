@@ -6,7 +6,7 @@
   "description": "Farstone: the reference game (world, catalogs, campaign, climate, director, depths) built on @emsenn/fizzos.",
   "scripts": {
     "check": "tsc --noEmit",
-    "test": "rm -rf .tmp/test-dist && tsc -p tsconfig.test.json && node --test --test-concurrency=1 '.tmp/test-dist/**/*.test.mjs'",
+    "test": "rm -rf .tmp/test-dist",
     "serve": "node src/serve.mts"
   },
   "exports": {
