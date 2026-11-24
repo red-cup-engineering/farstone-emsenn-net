@@ -65,7 +65,8 @@
       "exits": {
         "southwest": "harbor-quay",
         "north": "the-saltloft-inn",
-        "east": "the-net-loft"
+        "east": "the-net-loft",
+        "northeast": "the-wool-walk"
       },
       "tags": [
         "place",
@@ -171,9 +172,10 @@
     {
       "id": "the-fishing-grounds",
       "name": "The Fishing Grounds",
-      "description": "Cold green water over the bank where the fleet works in season — empty now but for wheeling gulls and the slap of the swell. The harbor mouth lies south.",
+      "description": "Cold green water over the bank where the fleet works in season — empty now but for wheeling gulls and the slap of the swell. The harbor mouth lies south; north, the water darkens over the Reefs.",
       "exits": {
-        "south": "harbor-mouth"
+        "south": "harbor-mouth",
+        "north": "the-reefs"
       },
       "tags": [
         "place",
@@ -743,7 +745,7 @@
     {
       "id": "cat-crypt",
       "name": "A Sealed Crypt",
-      "description": "Behind the broken seal: a single great sarcophagus of green-veined stone, the lid ground aside from within. Here lies — lay — the first lord of the island, emsenn whose name the worn cemetery stones still carry, and he has not stayed dead. The barrow-wight rises in a cold blue light, the grey-iron blade of his burial still in his fist, and a king's ransom of grave-gold at his feet.",
+      "description": "Behind the broken seal: a single great sarcophagus of green-veined stone, the lid ground aside from within. Here lies — lay — the first lord of the island, the founder whose name the worn cemetery stones still carry, and he has not stayed dead. The barrow-wight rises in a cold blue light, the grey-iron blade of his burial still in his fist, and a king's ransom of grave-gold at his feet.",
       "exits": {
         "west": "cat-gallery"
       },
@@ -832,7 +834,7 @@
     {
       "id": "sump-bloom",
       "name": "The Bloom",
-      "description": "The lowest pocket of the mire, where the fungus reaches its monstrous flowering: a chamber of glowing caps the height of a man, breathing spores in slow scheduled runs, and among them a thing that was perhaps once a man and is now a walking colony of the bloom, soft and luminous and reaching. The light here is the most beautiful and the most poisonous thing in the whole island.",
+      "description": "The lowest pocket of the mire, where the fungus reaches its monstrous flowering: a chamber of glowing caps the height of a man, breathing spores in slow pulses, and among them a thing that was perhaps once a man and is now a walking colony of the bloom, soft and luminous and reaching. The light here is the most beautiful and the most poisonous thing in the whole island.",
       "exits": {
         "up": "sump-mire"
       },
@@ -934,6 +936,87 @@
         "water",
         "lair",
         "depth:5"
+      ]
+    },
+    {
+      "id": "the-wool-walk",
+      "name": "The Wool Walk",
+      "description": "A cobbled lane behind market row, strung with tenter-frames where the winter's felt is racked to dry — tough, not hard, as Bett Harrow judges it. Fleeces come down from the valley by the sackload; Meg Wray's carding-bench sits under a lean-to, and the thump of the fulling-stocks carries from the shed at the lane's top.",
+      "exits": {
+        "southwest": "market-row",
+        "north": "the-fulling-shed"
+      },
+      "tags": [
+        "place",
+        "outdoor",
+        "town",
+        "craft",
+        "node:fiber"
+      ]
+    },
+    {
+      "id": "the-fulling-shed",
+      "name": "The Fulling-Shed",
+      "description": "Warm wet air, the smell of lanolin, and the steady thump of the fulling-stocks locking the winter's wool into felt — water, heat, and agitation, the one work on the island that cannot be undone. Half the town's women hold parliament here through the dark months; the shed is the second-warmest room on Farstone and knows it.",
+      "exits": {
+        "south": "the-wool-walk"
+      },
+      "tags": [
+        "place",
+        "indoor",
+        "craft",
+        "shelter",
+        "resource",
+        "social-hub",
+        "shop"
+      ]
+    },
+    {
+      "id": "the-reefs",
+      "name": "The Reefs",
+      "description": "Dark water shoaling over crowns of cold stone-coral, kelp streaming off the shallow heads, the swell humping white where the banks near the surface. The richest ground Farstone has and the most expensive: the passes shift, the coral takes nets and keels alike, and the wreck-registers ashore are mostly written here. A stripped mast leans off the crown to the east.",
+      "exits": {
+        "south": "the-fishing-grounds",
+        "east": "the-gannet-wreck",
+        "north": "the-sponge-ground"
+      },
+      "tags": [
+        "place",
+        "ocean",
+        "fishing",
+        "reef",
+        "node:fish"
+      ]
+    },
+    {
+      "id": "the-gannet-wreck",
+      "name": "The Wreck of the Gannet",
+      "description": "The Gannet lies broken on the reef crown, hard aground these many winters, her mast a lean grey finger and her ribs awash at every tide. Generations of salvors have stripped her to the fastenings, but the sea keeps shifting the sand, and the sand keeps giving up a little more. Something long and dark dens in her flooded hold.",
+      "exits": {
+        "west": "the-reefs"
+      },
+      "tags": [
+        "place",
+        "ocean",
+        "reef",
+        "wreck",
+        "wild",
+        "lair"
+      ]
+    },
+    {
+      "id": "the-sponge-ground",
+      "name": "The Sponge-Ground",
+      "description": "Beyond the reef crowns the bottom falls away into cold dark blue, and the long-lines come up slow from ground no light reaches. A deep haul sometimes brings up sponge-lace — a white glass lattice, crossed and strutted so a crack stops at the next joint, the old ones holding two shrimp husks that lived out their lives inside. Islanders mount them over the hearth and give them at weddings.",
+      "exits": {
+        "south": "the-reefs"
+      },
+      "tags": [
+        "place",
+        "ocean",
+        "deep",
+        "fishing",
+        "node:sponge"
       ]
     }
   ],
@@ -1243,7 +1326,7 @@
     {
       "id": "a-bundle-of-contraband",
       "name": "a bundle of oilcloth contraband",
-      "description": "Someone's untaxed brandy and tobacco, wedged above the tide-line in the sea-caves. Taking it is theft from people who settle outstanding work items personally — but it would fetch a good price from the right buyer.",
+      "description": "Someone's untaxed brandy and tobacco, wedged above the tide-line in the sea-caves. Taking it is theft from people who settle debts personally — but it would fetch a good price from the right buyer.",
       "location": "the-sea-caves",
       "tags": [
         "item",
@@ -1391,6 +1474,139 @@
         "item",
         "takeable",
         "value:200",
+        "weight:1"
+      ]
+    },
+    {
+      "id": "a-sack-of-raw-wool",
+      "name": "a sack of raw wool",
+      "description": "A fleece-sack down from the valley, greasy with lanolin and waiting on Meg Wray's combs. The landward half of the winter economy, by the sackload.",
+      "location": "the-wool-walk",
+      "tags": [
+        "item",
+        "takeable",
+        "material:wool",
+        "ware-type:fiber",
+        "linear-consumable",
+        "weight:2"
+      ]
+    },
+    {
+      "id": "a-hank-of-carded-wool",
+      "name": "a hank of carded wool",
+      "description": "Combed and rolled off the carding-bench, ready for the stocks or a lamp-wick's worth of spinning. Fiber, graded and honest.",
+      "location": "the-wool-walk",
+      "tags": [
+        "item",
+        "takeable",
+        "material:wool",
+        "ware-type:fiber",
+        "linear-consumable",
+        "weight:1"
+      ]
+    },
+    {
+      "id": "a-felt-cap",
+      "name": "a boiled-felt cap",
+      "description": "A grey felt cap off Bett Harrow's shelf, dense enough to turn sleet and a glancing blow both. For sale.",
+      "location": "the-fulling-shed",
+      "tags": [
+        "item",
+        "ware",
+        "price:35",
+        "armor",
+        "armor-protection:1",
+        "armor-covers:head",
+        "weight:1"
+      ]
+    },
+    {
+      "id": "a-boiled-wool-coat",
+      "name": "a boiled-wool coat",
+      "description": "The fulling-shed's best work: wool locked into felt so dense the wind gives up. Tough, not hard. For sale.",
+      "location": "the-fulling-shed",
+      "tags": [
+        "item",
+        "ware",
+        "price:110",
+        "armor",
+        "armor-protection:4",
+        "armor-covers:torso",
+        "weight:3"
+      ]
+    },
+    {
+      "id": "the-shed-hearth",
+      "name": "the fulling-shed hearth",
+      "description": "The warm heart of the wool quarter: a broad hearth, a kettle, and the parliament of the dark months in session around it. Warm yourself here.",
+      "location": "the-fulling-shed",
+      "tags": [
+        "resource",
+        "fixed",
+        "provides:need:recreation",
+        "amount:24"
+      ]
+    },
+    {
+      "id": "a-string-of-trade-beads",
+      "name": "a string of trade-beads",
+      "description": "Sea-glass and bone beads knotted on tarred twine, the knots doing half the work — bare glass shatters, beaded glass bears load. Old island craft, worth coin to the right buyer.",
+      "location": "the-wool-walk",
+      "tags": [
+        "item",
+        "takeable",
+        "value:15",
+        "weight:1"
+      ]
+    },
+    {
+      "id": "a-cold-water-crab",
+      "name": "a cold-water crab",
+      "description": "A heavy-clawed crab hauled off the reef crown, sweet as the water is cold.",
+      "location": "the-reefs",
+      "tags": [
+        "item",
+        "takeable",
+        "edible",
+        "nutrition:5",
+        "shellfish"
+      ]
+    },
+    {
+      "id": "a-salvaged-deadeye",
+      "name": "a salvaged deadeye",
+      "description": "An oak deadeye off the Gannet's standing rigging, worn smooth by sand and forty winters of tide. Sound enough to rig again, or to sell to a chandler with a feel for such things.",
+      "location": "the-gannet-wreck",
+      "tags": [
+        "item",
+        "takeable",
+        "material:oak",
+        "value:12",
+        "weight:2"
+      ]
+    },
+    {
+      "id": "a-case-of-wreck-brandy",
+      "name": "a case of wreck-brandy",
+      "description": "Bottles from the Gannet's manifest — or from somebody's manifest — wedged under her ribs and sealed by the sand. Salvage law says one thing about it; Riba Voss says another, in clean coin.",
+      "location": "the-gannet-wreck",
+      "tags": [
+        "item",
+        "takeable",
+        "value:30",
+        "contraband",
+        "weight:3"
+      ]
+    },
+    {
+      "id": "a-sponge-lace-lattice",
+      "name": "a sponge-lace lattice",
+      "description": "A white glass lattice hauled up from the dark of the sponge-ground, crossed and diagonally strutted so a crack stops at the next joint, two shrimp husks resting inside. A wedding-token, and the island's own image of a good house: a lattice that stops its cracks and keeps a pair alive inside.",
+      "location": "the-sponge-ground",
+      "tags": [
+        "item",
+        "takeable",
+        "value:45",
         "weight:1"
       ]
     }
@@ -2143,6 +2359,70 @@
         "attack:22",
         "respawn:600",
         "eldritch"
+      ]
+    },
+    {
+      "id": "bett-harrow",
+      "name": "Bett Harrow",
+      "description": "The felting-mistress: broad, steam-reddened, cheerful in the way of people whose work is warm in winter. She runs the fulling-stocks and the parliament around the hearth, judges the winter's felt, and grants her highest mark — tough, not hard — to cloth and character alike.",
+      "location": "the-fulling-shed",
+      "tags": [
+        "npc",
+        "mover:tick",
+        "shopkeeper",
+        "role:felter",
+        "faction:fishers",
+        "coin:180",
+        "skill:felting:50",
+        "shop",
+        "sells:wool",
+        "stance:peaceful"
+      ]
+    },
+    {
+      "id": "meg-wray",
+      "name": "Meg Wray",
+      "description": "The wool-carder, sharp-tongued keeper of the carding-combs at the lean-to bench. She grades every fleece the valley sends down, remembers every short-weight sack for a decade, and her combs move faster than her judgments, which is saying something.",
+      "location": "the-wool-walk",
+      "tags": [
+        "npc",
+        "mover:tick",
+        "role:carder",
+        "faction:fishers",
+        "coin:40",
+        "skill:carding:45",
+        "stance:peaceful"
+      ]
+    },
+    {
+      "id": "reef-halyard",
+      "name": "Reef Halyard",
+      "description": "The reef-pilot, last of the trade that knows the passes over the banks by feel — where the coral takes nets, where the tide covers the crowns, when to reef down and run for the mouth. Aground ashore all winter, worth a pilot's fee the moment the season turns, and he wears the double reading of his name without smiling about it.",
+      "location": "harbor-quay",
+      "tags": [
+        "npc",
+        "mover:tick",
+        "role:pilot",
+        "faction:fishers",
+        "coin:55",
+        "skill:seamanship:55",
+        "stance:peaceful"
+      ]
+    },
+    {
+      "id": "a-conger-eel",
+      "name": "a conger eel",
+      "description": "A conger thick as a bollard, denned in the Gannet's flooded hold, grey and patient and entirely of the opinion that the wreck's salvage is its own. It has the jaws to argue the point.",
+      "location": "the-gannet-wreck",
+      "tags": [
+        "npc",
+        "monster",
+        "hostile",
+        "home:the-gannet-wreck",
+        "health:22",
+        "attack:8",
+        "respawn:80",
+        "beast"
       ]
     }
   ],
